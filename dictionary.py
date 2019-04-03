@@ -1,6 +1,7 @@
 import json
 import requests
 import webbrowser
+import io
 #pip install requests
 
 #Function for the normal defintion, gives the entire json response from google definitions
@@ -48,9 +49,9 @@ def SubjectInput():
 def batchImport():
     print("Batch importing definitions")
     print("make sure the definitions txt file has your definitions copied and pasted into it")
-    with open('filename.txt') as f:
-        lines = f.readlines()
-    tests = lines.split("\n")
+    timport = open("filename.txt","r")
+    timport.read()
+
 
 print("what type of definition search")
 print("[1] Normal Definition")
