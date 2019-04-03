@@ -45,14 +45,23 @@ def SubjectInput():
     else:
         exit()
 
+def batchImport():
+    print("Batch importing definitions")
+    print("make sure the definitions txt file has your definitions copied and pasted into it")
+    with open('filename.txt') as f:
+        lines = f.readlines()
+    tests = lines.split("\n")
+
 print("what type of definition search")
 print("[1] Normal Definition")
 print("[2] Subject Definition")
+print("[3] Batch Import Definitions")
 answer = input()
 if answer == "1":
     NormalDef()
 elif answer == "2":
     SubjectInput()
-
+elif answer == "3":
+    batchImport()
 else:
-    print("Invalid Input")
+    print("Invalid Input, Try Again")
